@@ -1,21 +1,24 @@
 # Studio Anne — Digital Profile
 
-Responsive digital profile for Studio Anne (Interior Design • Styling • Sourcing).
+Official GitHub Pages digital profile for **Studio Anne**, featuring the animated brand monogram and the line **Interior Design • Styling • Sourcing**.
 
-## Official brand
-- Burnt Sienna `#702619`
-- Double Spanish White `#E6CEB4`
-- White `#FFFFFF`
-- DM Sans for core typography, Crimson Pro for editorial accents.
+## Live website
+https://mdanson27.github.io/studioanne/
 
-## Website files
-The completed website package includes `index.html`, `styles.css`, `script.js`, `profile.js`, `picture.png` (wordmark), and `symbol.png` (monogram). Upload these files to the root of the `main` branch.
+## Status
+The responsive initial website is published as a self-contained `index.html` on `main`. GitHub Pages must be enabled at **Settings → Pages → Deploy from a branch → main → /(root)**.
 
-## GitHub Pages
-After uploading website files, open **Settings → Pages** and select **Deploy from a branch**, branch **main**, directory **/(root)**. Save. Expected address: https://mdanson27.github.io/studioanne/
+## Brand system
+- Burnt Sienna: `#702619`
+- Double Spanish White: `#E6CEB4`
+- White: `#FFFFFF`
+- DM Sans and Crimson Pro typography
 
-## Updating client details
-Edit `profile.js` when the client form arrives. Blank contact fields will remain hidden; don't add unverified phone numbers or addresses.
+## Intro sequence
+The original Studio Anne monogram is embedded as a PNG, animated first, followed by the studio name and the tagline. A Skip intro control and Replay intro option are provided.
 
-## Introduction animation
-Monogram draws into view, Studio Anne wordmark appears, followed by “Interior Design • Styling • Sourcing”, then the profile opens. Includes skip, replay, mobile responsiveness, and reduced-motion support.
+## Client details
+Contact information has intentionally been left blank pending the client form. Edit the `profile` object near the end of `index.html` to add confirmed email, telephone, WhatsApp, Instagram and website values.
+
+## Future updates
+The longer separated-source prototype (HTML/CSS/JS/assets) is available as a local project package. This single-file GitHub Pages version has no missing asset dependencies.
