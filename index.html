@@ -40,7 +40,7 @@ function start(){loader.classList.remove('done');site.classList.remove('ready');
 document.getElementById('skip').onclick=finish;
 document.getElementById('year').textContent=new Date().getFullYear();
 const links=[...document.querySelectorAll('.nav a,.dots a')];const observer=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}},{threshold:.55});document.querySelectorAll('.screen').forEach(s=>observer.observe(s));
-function vcard(e){
+async function vcard(e){
 e.preventDefault();
 const escapeText=value=>String(value).replace(/\\/g,'\\\\').replace(/\r?\n/g,'\\n').replace(/,/g,'\\,').replace(/;/g,'\\;');
 const bio='Studio Anne is a boutique design studio crafting distinctive interiors and thoughtfully curated spaces. We blend elegance, creativity and functionality to create timeless environments with character.';
@@ -54,7 +54,7 @@ const lines=[
 'TEL;TYPE=WORK,VOICE:+256779688894',
 'EMAIL;TYPE=INTERNET,WORK:studioanne.an@gmail.com',
 'ADR;TYPE=WORK:;;;Kampala;;;Uganda',
-'IMPP: https://wa.me/256779688894',
+'IMPP:https://wa.me/256779688894',
 'URL;TYPE=Instagram:https://www.instagram.com/studioannne_/',
 'URL;TYPE=TikTok:https://www.tiktok.com/@studioannne',
 'X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/studioannne_/',
@@ -62,6 +62,14 @@ const lines=[
 'X-WHATSAPP:+256779688894',
 'NOTE:'+escapeText(notes.join('\n')),
 'END:VCARD'];
+// Embed a reduced portrait when the image is available. The card still downloads if it cannot be read.
+try {
+  const img=new Image();img.src='profile%20picture.jpeg';
+  await new Promise((resolve,reject)=>{if(img.complete&&img.naturalWidth){resolve();return}img.onload=resolve;img.onerror=reject});
+  const canvas=document.createElement('canvas');const scale=Math.min(1,320/img.naturalWidth);canvas.width=Math.round(img.naturalWidth*scale);canvas.height=Math.round(img.naturalHeight*scale);
+  canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);
+  const photo=canvas.toDataURL('image/jpeg',.75).split(',')[1];if(photo)lines.splice(lines.length-1,0,'PHOTO;ENCODING=b;TYPE=JPEG:'+photo);
+} catch(err) { /* A complete text contact is still available. */ }
 const folded=lines.map(line=>{const parts=[];while(line.length>70){parts.push(line.slice(0,70));line=' '+line.slice(70)}parts.push(line);return parts.join('\r\n')}).join('\r\n')+'\r\n';
 const blob=new Blob([folded],{type:'text/vcard;charset=utf-8'});
 const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Clara-Namara-Studio-Anne-Complete.vcf';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
