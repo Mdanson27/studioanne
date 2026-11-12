@@ -14,10 +14,45 @@ header{height:72px;position:fixed;inset:0 0 auto;z-index:30;padding:0 max(6vw,18
 .expertise-card li{font-size:10px;line-height:1.42;margin-bottom:4px;white-space:normal;overflow-wrap:break-word}
 @media(max-width:760px){.details-grid{grid-template-columns:minmax(0,1fr);gap:9px}.expertise-card{padding:11px 14px}.expertise-card h3{font-size:10px;letter-spacing:.11em}.expertise-card h3 span{font-size:10px}.expertise-card ul{padding-left:17px}.expertise-card li{font-size:10px;line-height:1.38;margin-bottom:4px}}
 @media(max-width:380px){.expertise-card{padding:10px 12px}.expertise-card li{font-size:9.5px}}
-.connect a{display:flex;align-items:center;justify-content:center;gap:9px;line-height:1.2;min-height:43px}.connect a svg,.connect a .brand-icon{width:18px;height:18px;flex-shrink:0}.connect a .brand-icon{filter:brightness(0) saturate(100%) invert(84%) sepia(13%) saturate(426%) hue-rotate(343deg) brightness(100%) contrast(91%)}.connect a:hover .brand-icon{filter:brightness(0) saturate(100%) invert(18%) sepia(36%) saturate(1750%) hue-rotate(337deg) brightness(88%) contrast(99%)}.contact-guidance{font:400 11px/1.65 'DM Sans',sans-serif;color:#e6ceb4bd;max-width:440px;margin-top:13px}.bottom{display:block}.replay{display:none}@media(max-width:760px){.connect a{gap:7px;padding:10px 6px;min-height:42px}.connect a svg,.connect a .brand-icon{width:16px;height:16px}.contact-guidance{font-size:10px;line-height:1.45;margin-top:10px}}</style></head><body class="loading">
+.connect a{display:flex;align-items:center;justify-content:center;gap:9px;line-height:1.2;min-height:43px}.connect a svg,.connect a .brand-icon{width:18px;height:18px;flex-shrink:0}.connect a .brand-icon{filter:brightness(0) saturate(100%) invert(84%) sepia(13%) saturate(426%) hue-rotate(343deg) brightness(100%) contrast(91%)}.connect a:hover .brand-icon{filter:brightness(0) saturate(100%) invert(18%) sepia(36%) saturate(1750%) hue-rotate(337deg) brightness(88%) contrast(99%)}.contact-guidance{font:400 11px/1.65 'DM Sans',sans-serif;color:#e6ceb4bd;max-width:440px;margin-top:13px}.bottom{display:block}.replay{display:none}@media(max-width:760px){.connect a{gap:7px;padding:10px 6px;min-height:42px}.connect a svg,.connect a .brand-icon{width:16px;height:16px}.contact-guidance{font-size:10px;line-height:1.45;margin-top:10px}}
+/* Identity-forward first screen: no portrait photography */
+.brand-composition{width:100%;max-width:525px;min-height:520px;margin:auto;justify-self:center;background:var(--sand);border:1px solid #70261924;box-shadow:0 28px 65px #633b281b;display:flex;flex-direction:column;position:relative;isolation:isolate;overflow:hidden;color:var(--sienna)}
+.brand-composition:after{content:'';position:absolute;inset:13px;border:1px solid #7026192b;pointer-events:none}
+.composition-top,.composition-foot{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:29px 35px}
+.composition-top{font-size:10px;letter-spacing:.18em;font-weight:600}
+.composition-art{min-height:340px;position:relative;display:grid;place-items:center;flex:1;overflow:hidden}
+.composition-arch{position:absolute;border-radius:50% 50% 0 0;border:1px solid #7026192f;bottom:-38%;left:50%;transform:translateX(-50%);width:76%;aspect-ratio:.85}
+.composition-arch--inner{width:55%;bottom:-25%;border-color:#7026193e}
+.composition-emblem{position:relative;z-index:2;display:grid;place-items:center;border-radius:50%;width:210px;height:210px;border:1px solid #70261955;background:#e6ceb4c8;box-shadow:0 0 0 17px #70261908}
+.composition-emblem img{width:91px;height:135px;object-fit:contain;filter:drop-shadow(0 2px 1px #70261913)}
+.composition-rule{position:absolute;width:24%;height:1px;top:50%;background:#70261948}
+.composition-rule--left{left:0}.composition-rule--right{right:0}
+.composition-foot{border-top:1px solid #70261933;margin:0 27px;padding:22px 8px 29px;align-items:end}
+.composition-foot strong{display:block;font:italic 32px 'Crimson Pro',Georgia,serif;font-weight:400;letter-spacing:-.035em;line-height:1}
+.composition-foot p{margin:9px 0 0;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.composition-foot p span{margin:0 2px}.composition-number{font-size:11px;letter-spacing:.12em;opacity:.8}
+@media(max-width:760px){
+ .hero{justify-content:center;gap:21px}
+ .brand-composition{order:-1;min-height:0;height:min(35svh,310px);max-width:415px}
+ .brand-composition:after{inset:9px}
+ .composition-top{padding:15px 22px 0;font-size:9px}
+ .composition-art{min-height:0}
+ .composition-arch{width:75%;bottom:-105%}.composition-arch--inner{bottom:-85%;width:56%}
+ .composition-emblem{width:112px;height:112px;box-shadow:0 0 0 10px #70261908}
+ .composition-emblem img{width:48px;height:72px}
+ .composition-foot{margin:0 17px;padding:9px 6px 15px}
+ .composition-foot strong{font-size:22px}.composition-foot p{font-size:8px;margin-top:4px;letter-spacing:.07em}
+ .composition-number{font-size:9px}
+}
+@media(max-width:420px){.brand-composition{height:min(31svh,254px)}.composition-emblem{width:93px;height:93px}.composition-emblem img{width:41px;height:62px}.composition-top{font-size:8px}.composition-rule{width:18%}.hero{gap:15px}}
+@media(max-height:720px) and (max-width:760px){.brand-composition{height:27svh}.composition-foot{padding-bottom:12px}.composition-top{padding-top:12px}}
+</style></head><body class="loading">
 <div id="loader" class="loader" aria-label="Studio Anne introduction"><div class="load-inner"><div class="load-brand"><div class="symbol-build" aria-hidden="true"><div class="slice upper"><img src="studio-anne-monogram.svg" alt=""></div><div class="slice middle"><img src="studio-anne-monogram.svg" alt=""></div><div class="slice lower"><img src="studio-anne-monogram.svg" alt=""></div></div><div class="load-word"><span>Studio</span><span>Anne</span></div></div><p class="load-tagline">Interior Design • Styling • Sourcing</p><div class="load-progress"></div></div><button type="button" id="skip" class="skip">Skip intro ↗</button></div>
 <div class="site" id="site"><header><a class="brand" href="#profile" aria-label="Studio Anne"><img src="studio-anne-monogram.svg" alt=""><span><b>Studio</b><b>Anne</b></span></a><nav class="nav" aria-label="Section navigation"><a href="#profile" class="active">Profile</a><a href="#studio">Studio</a><a href="#connect">Connect</a></nav></header><nav class="dots" aria-label="Page sections"><a href="#profile" class="active" aria-label="Profile"></a><a href="#studio" aria-label="Studio and expertise"></a><a href="#connect" aria-label="Contact"></a></nav>
-<main><section class="screen hero" id="profile" aria-label="Clara Namara profile"><div class="hero-copy"><p class="eyebrow">Studio Anne / Creative Director</p><h1>Clara <em>Namara.</em></h1><p class="sub">Design with intention.</p><p class="bio">Studio Anne is a boutique design studio crafting distinctive interiors and thoughtfully curated spaces. We blend elegance, creativity and functionality to create timeless environments with character.</p><div class="intro-actions"><a class="btn" href="https://wa.me/256779688894" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><a class="btn outline" href="#studio">Explore studio ↓</a><a class="btn outline" href="#" id="saveContactHero" aria-label="Save Clara Namara contact card">Save contact ↓</a></div><div class="location">Creative Director &nbsp; · &nbsp; Kampala, Uganda</div></div><figure class="portrait-wrap"><div class="portrait-frame"><img src="profile%20picture.jpeg" alt="Clara Namara, Creative Director of Studio Anne" loading="eager"></div><figcaption class="portrait-caption"><strong>Clara Namara</strong><small>Creative Director · 2026—Present</small></figcaption></figure><div class="scrollhint">Scroll to explore ↓</div></section>
+<main><section class="screen hero" id="profile" aria-label="Clara Namara profile"><div class="hero-copy"><p class="eyebrow">Studio Anne / Creative Director</p><h1>Clara <em>Namara.</em></h1><p class="sub">Design with intention.</p><p class="bio">Studio Anne is a boutique design studio crafting distinctive interiors and thoughtfully curated spaces. We blend elegance, creativity and functionality to create timeless environments with character.</p><div class="intro-actions"><a class="btn" href="https://wa.me/256779688894" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><a class="btn outline" href="#studio">Explore studio ↓</a><a class="btn outline" href="#" id="saveContactHero" aria-label="Save Clara Namara contact card">Save contact ↓</a></div><div class="location">Creative Director &nbsp; · &nbsp; Kampala, Uganda</div></div><aside class="brand-composition" aria-label="Studio Anne design studio identity">
+<div class="composition-top"><span>THE STUDIO</span><span>KAMPALA · UGANDA</span></div>
+<div class="composition-art" aria-hidden="true"><div class="composition-arch composition-arch--outer"></div><div class="composition-arch composition-arch--inner"></div><div class="composition-emblem"><img src="studio-anne-monogram.svg" alt=""></div><span class="composition-rule composition-rule--left"></span><span class="composition-rule composition-rule--right"></span></div>
+<div class="composition-foot"><div><strong>Studio Anne</strong><p>Interior Design <span>•</span> Styling <span>•</span> Sourcing</p></div><span class="composition-number">01 / 03</span></div></aside><div class="scrollhint">Scroll to explore ↓</div></section>
 <section class="screen screen-two" id="studio" aria-label="About Studio Anne and expertise"><div class="section-top"><div><p class="eyebrow">02 / The Studio</p><h2>Considered spaces.<br><em>Timeless character.</em></h2></div><p class="about">A boutique interior design studio blending elegance, creativity and functionality. Led by Clara Namara, Studio Anne specialises in interior design, styling and sourcing.</p></div><div class="service-row"><article class="service"><span class="no">01</span><h3>Interior Design</h3><p>Concept development, space planning and thoughtful material selection.</p></article><article class="service"><span class="no">02</span><h3>Styling</h3><p>Furniture, décor and art curation, colour and material coordination.</p></article><article class="service"><span class="no">03</span><h3>Sourcing</h3><p>Procurement, finish selection and project coordination.</p></article></div><div class="details-grid" aria-label="Studio Anne skills and core competencies">
 <section class="expertise-card"><h3>Skills <span>07</span></h3><ul>
 <li>Interior Design &amp; Space Planning</li><li>Interior Styling &amp; Curation</li><li>Sourcing &amp; Procurement</li><li>Furniture &amp; Décor Selection</li><li>Colour &amp; Material Coordination</li><li>Landscaping &amp; Outdoor Styling</li><li>Project Coordination &amp; Execution</li>
@@ -62,14 +97,6 @@ const lines=[
 'X-WHATSAPP:+256779688894',
 'NOTE:'+escapeText(notes.join('\n')),
 'END:VCARD'];
-// Embed a reduced portrait when the image is available. The card still downloads if it cannot be read.
-try {
-  const img=new Image();img.src='profile%20picture.jpeg';
-  await new Promise((resolve,reject)=>{if(img.complete&&img.naturalWidth){resolve();return}img.onload=resolve;img.onerror=reject});
-  const canvas=document.createElement('canvas');const scale=Math.min(1,320/img.naturalWidth);canvas.width=Math.round(img.naturalWidth*scale);canvas.height=Math.round(img.naturalHeight*scale);
-  canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);
-  const photo=canvas.toDataURL('image/jpeg',.75).split(',')[1];if(photo)lines.splice(lines.length-1,0,'PHOTO;ENCODING=b;TYPE=JPEG:'+photo);
-} catch(err) { /* A complete text contact is still available. */ }
 const folded=lines.map(line=>{const parts=[];while(line.length>70){parts.push(line.slice(0,70));line=' '+line.slice(70)}parts.push(line);return parts.join('\r\n')}).join('\r\n')+'\r\n';
 const blob=new Blob([folded],{type:'text/vcard;charset=utf-8'});
 const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Clara-Namara-Studio-Anne-Complete.vcf';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
