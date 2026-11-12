@@ -1,22 +1,30 @@
 # Studio Anne — Clara Namara
-Live site: https://mdanson27.github.io/studioanne/
 
-## Three-screen mobile-first digital profile
-1. **Profile** — Clara Namara portrait at the very top on mobile, biography, WhatsApp, and professional title.
-2. **Studio** — interior design, styling, sourcing, and expandable skills / core competencies.
-3. **Connect** — telephone, WhatsApp, email, Instagram, TikTok, Clara’s experience and a downloadable vCard.
+**Live website:** https://mdanson27.github.io/studioanne/
 
-## Identity and animation
-The official brand uses **Burnt Sienna #702619**, **Double Spanish White #E6CEB4**, **DM Sans**, and **Crimson Pro**. The GitHub repository contains `studio-anne-monogram.svg`, traced from the approved monogram reference, with a three-part construction entrance: upper S/arch rises, middle motif drops, lower legs rise. Once assembled, the Studio Anne wordmark and “Interior Design • Styling • Sourcing” appear.
+## Three-screen digital profile
 
-## Assets
-- `index.html`: complete dependency-free website (CSS and JavaScript embedded)
-- `studio-anne-monogram.svg`: official-mark vector outline used for loader, favicon and navbar
-- `profile picture.jpeg`: the actual portrait uploaded by the client
-- `picture.png`: original studio logo uploaded by the client
-- `README.md`: this guide
+1. **Profile:** Clara Namara, Creative Director — studio biography, WhatsApp, Explore Studio, Save Contact, and an original Studio Anne brand composition in place of personal photography.
+2. **Studio:** Interior Design, Styling, and Sourcing plus seven skills and nine competencies **always visible** in stacked full-width panels.
+3. **Connect:** phone, WhatsApp (with an enquiry message), email, Instagram, TikTok, career summary, and downloadable full vCard.
 
-## Deployment
-GitHub Pages from `main` / `/(root)`. The site includes three viewport-height snapping sections, responsive design, motion-reduction support and client contact links.
+## Brand design and animation
 
-© Studio Anne. Developed for AutoMinds Africa.
+- Burnt Sienna: `#702619`; Double Spanish White: `#E6CEB4`
+- Fonts: **DM Sans** and **Crimson Pro**
+- Brand visual: official Studio Anne monogram within a restrained architectural frame.
+- Intro: the monogram's layers assemble as the top S form rises, middle shape descends and lower form rises, then the studio name and tagline appear.
+- No portrait appears on the website or in the generated VCF. The former portrait image was removed from the currently published branch. Older Git commits may still retain it in history.
+
+## Important files
+
+- `index.html` — self-contained HTML, CSS and JavaScript for the profile
+- `studio-anne-monogram.svg` — branded monogram used in the hero, loader, and favicon
+- `picture.png` — supplied original studio logo
+- `README.md` — setup and maintenance
+
+## Publishing
+
+GitHub Pages: **main / (root)**
+
+© Studio Anne. Built for AutoMinds Africa.
