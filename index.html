@@ -46,6 +46,39 @@ header{height:72px;position:fixed;inset:0 0 auto;z-index:30;padding:0 max(6vw,18
 }
 @media(max-width:420px){.brand-composition{height:min(31svh,254px)}.composition-emblem{width:93px;height:93px}.composition-emblem img{width:41px;height:62px}.composition-top{font-size:8px}.composition-rule{width:18%}.hero{gap:15px}}
 @media(max-height:720px) and (max-width:760px){.brand-composition{height:27svh}.composition-foot{padding-bottom:12px}.composition-top{padding-top:12px}}
+
+/* Contact footer: in normal layout flow, never layered over the contact card. */
+.screen-three{grid-template-rows:minmax(0,1fr) auto;column-gap:9%;row-gap:0}
+.screen-three>div:first-child,.screen-three>.director-card{min-width:0}
+.screen-three .bottom{position:static;grid-column:1/-1;align-self:end;justify-self:stretch;width:100%;margin:0;padding:14px 0 0;border-top:1px solid #e6ceb444;font:400 11px/1.5 'DM Sans',sans-serif;letter-spacing:.035em;text-transform:none;opacity:1;text-align:left;color:var(--sand)}
+.screen-three .bottom a{display:inline-block;color:inherit;text-decoration:none;transition:opacity .2s ease}
+.screen-three .bottom a strong{font-weight:600}
+.screen-three .bottom a:hover{opacity:.78}
+.screen-three .bottom a:focus-visible{outline:2px solid var(--sand);outline-offset:5px}
+.screen-three .director-card{z-index:1}
+.screen-three .director-card .vcard{margin-top:15px;padding:11px 12px;line-height:1.45}
+@media(max-width:760px){
+ .screen-three{height:100svh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;gap:13px;padding-top:76px;padding-bottom:calc(20px + env(safe-area-inset-bottom));overflow-y:auto;overscroll-behavior-y:contain}
+ .screen-three>div:first-child{flex:0 0 auto}
+ .screen-three h2{font-size:clamp(37px,9vw,50px);line-height:1.02;margin:12px 0 10px}
+ .screen-three>div:first-child>p:not(.eyebrow){font-size:19px;margin:0 0 13px}
+ .screen-three .connect{gap:8px}
+ .screen-three .connect a{min-height:40px;padding:9px 8px}
+ .screen-three .contact-guidance{margin-top:10px;line-height:1.5}
+ .screen-three .director-card{flex:0 0 auto;padding:18px 18px 16px}
+ .screen-three .director-card h3{margin:7px 0 3px;font-size:31px}
+ .screen-three .director-card .role{margin:0 0 10px;font-size:12px}
+ .screen-three .director-card dt{margin-top:10px;font-size:9px}
+ .screen-three .director-card dd{font-size:12px;line-height:1.45}
+ .screen-three .director-card .vcard{margin-top:13px;padding:10px;font-size:11px}
+ .screen-three .bottom{margin-top:auto;flex-shrink:0;padding-top:14px;position:static;bottom:auto;left:auto;font-size:11px}
+}
+@media(max-height:740px) and (max-width:760px){
+ .screen-three{gap:11px;padding-top:68px}
+ .screen-three h2{font-size:clamp(35px,8vw,43px)}
+ .screen-three .director-card{padding:14px 16px}
+ .screen-three .director-card dt{margin-top:8px}
+}
 </style></head><body class="loading">
 <div id="loader" class="loader" aria-label="Studio Anne introduction"><div class="load-inner"><div class="load-brand"><div class="symbol-build" aria-hidden="true"><div class="slice upper"><img src="studio-anne-monogram.svg" alt=""></div><div class="slice middle"><img src="studio-anne-monogram.svg" alt=""></div><div class="slice lower"><img src="studio-anne-monogram.svg" alt=""></div></div><div class="load-word"><span>Studio</span><span>Anne</span></div></div><p class="load-tagline">Interior Design • Styling • Sourcing</p><div class="load-progress"></div></div><button type="button" id="skip" class="skip">Skip intro ↗</button></div>
 <div class="site" id="site"><header><a class="brand" href="#profile" aria-label="Studio Anne"><img src="studio-anne-monogram.svg" alt=""><span><b>Studio</b><b>Anne</b></span></a><nav class="nav" aria-label="Section navigation"><a href="#profile" class="active">Profile</a><a href="#studio">Studio</a><a href="#connect">Connect</a></nav></header><nav class="dots" aria-label="Page sections"><a href="#profile" class="active" aria-label="Profile"></a><a href="#studio" aria-label="Studio and expertise"></a><a href="#connect" aria-label="Contact"></a></nav>
@@ -67,13 +100,13 @@ header{height:72px;position:fixed;inset:0 0 auto;z-index:30;padding:0 max(6vw,18
 <a href="https://www.instagram.com/studioannne_/" target="_blank" rel="noopener noreferrer" aria-label="Visit Studio Anne on Instagram" title="Follow @studioannne_ on Instagram"><img class="brand-icon" src="https://cdn.jsdelivr.net/npm/simple-icons/icons/instagram.svg" width="18" height="18" alt="" loading="lazy"><span>Instagram</span></a>
 <a href="https://www.tiktok.com/@studioannne" target="_blank" rel="noopener noreferrer" aria-label="Visit Studio Anne on TikTok" title="Follow @studioannne on TikTok"><img class="brand-icon" src="https://cdn.jsdelivr.net/npm/simple-icons/icons/tiktok.svg" width="18" height="18" alt="" loading="lazy"><span>TikTok</span></a>
 <a href="#" id="saveContact" aria-label="Download Clara Namara complete contact details" title="Download contact with details and social links"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-5-5 5 5 5-5M4 17v3h16v-3"/></svg><span>Save contact</span></a>
-</div><div class="contact-guidance">WhatsApp opens with a ready-to-send message. Instagram and TikTok open Studio Anne’s profiles to follow or message.</div></div><aside class="director-card"><div class="meta">The Creative Director</div><h3>Clara Namara</h3><p class="role">Studio Anne · 2026 – Present</p><dl><dt>Location</dt><dd>Kampala, Uganda</dd><dt>Phone / WhatsApp</dt><dd><a href="tel:+256779688894">+256 779 688 894</a></dd><dt>Email</dt><dd><a href="mailto:studioanne.an@gmail.com">studioanne.an@gmail.com</a></dd><dt>Social</dt><dd>Instagram @studioannne_ · TikTok @studioannne</dd></dl><a href="#" class="vcard" id="saveContactTwo">Download complete contact card ↓</a></aside><div class="bottom">© <span id="year"></span> Studio Anne · Kampala</div></section></main></div>
+</div><div class="contact-guidance">WhatsApp opens with a ready-to-send message. Instagram and TikTok open Studio Anne’s profiles to follow or message.</div></div><aside class="director-card"><div class="meta">The Creative Director</div><h3>Clara Namara</h3><p class="role">Studio Anne · 2026 – Present</p><dl><dt>Location</dt><dd>Kampala, Uganda</dd><dt>Phone / WhatsApp</dt><dd><a href="tel:+256779688894">+256 779 688 894</a></dd><dt>Email</dt><dd><a href="mailto:studioanne.an@gmail.com">studioanne.an@gmail.com</a></dd><dt>Social</dt><dd>Instagram @studioannne_ · TikTok @studioannne</dd></dl><a href="#" class="vcard" id="saveContactTwo">Download complete contact card ↓</a></aside><footer class="bottom" aria-label="Website credit"><a href="https://automindsafrica.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit AutoMinds Africa website">Powered by <strong>AutoMinds Africa</strong></a></footer></section></main></div>
 <script>
 const loader=document.getElementById('loader'),site=document.getElementById('site');let timer;
 function finish(){clearTimeout(timer);loader.classList.add('done');site.classList.add('ready');document.body.classList.remove('loading');loader.setAttribute('aria-hidden','true')}
 function start(){loader.classList.remove('done');site.classList.remove('ready');loader.removeAttribute('aria-hidden');document.body.classList.add('loading');for(const el of loader.querySelectorAll('.slice img,.load-word span,.load-tagline,.load-progress,.load-progress:after')){el.style.animation='none';void el.offsetWidth;el.style.animation=''}timer=setTimeout(finish,matchMedia('(prefers-reduced-motion:reduce)').matches?0:3700)}
 document.getElementById('skip').onclick=finish;
-document.getElementById('year').textContent=new Date().getFullYear();
+
 const links=[...document.querySelectorAll('.nav a,.dots a')];const observer=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}},{threshold:.55});document.querySelectorAll('.screen').forEach(s=>observer.observe(s));
 async function vcard(e){
 e.preventDefault();
