@@ -79,13 +79,61 @@ header{height:72px;position:fixed;inset:0 0 auto;z-index:30;padding:0 max(6vw,18
  .screen-three .director-card{padding:14px 16px}
  .screen-three .director-card dt{margin-top:8px}
 }
+
+/* Smaller professionally framed director portrait, restored without altering three-screen navigation. */
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,.74fr);column-gap:clamp(24px,5vw,95px)}
+.hero-copy{position:relative;z-index:1}
+.director-portrait{justify-self:center;align-self:center;position:relative;max-width:325px;width:min(100%,325px);margin:0}
+.director-portrait__mat{position:relative;background:var(--sand);padding:9px;border:1px solid #70261930;box-shadow:0 20px 45px #56332121}
+.director-portrait__mat:after{content:'';position:absolute;inset:17px -11px -11px 17px;border:1px solid #7026195c;z-index:-1;pointer-events:none}
+.director-portrait__photo{overflow:hidden;background:#d8c6b7}
+.director-portrait__photo img{display:block;width:100%;max-height:385px;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;filter:grayscale(1)}
+.director-portrait__seal{position:absolute;bottom:19px;left:19px;width:42px;height:51px;display:grid;place-items:center;background:#e6ceb4e8;border:1px solid #7026192f;padding:7px}
+.director-portrait__seal img{display:block;height:100%;width:100%;object-fit:contain}
+.director-portrait__caption{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:12px;color:var(--sienna)}
+.director-portrait__caption span{font:italic 23px 'Crimson Pro',Georgia,serif;white-space:nowrap}
+.director-portrait__caption small{font:500 9px 'DM Sans',sans-serif;letter-spacing:.08em;text-align:right}
+@media(max-width:760px){
+ .hero{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:14px;padding-top:70px}
+ .director-portrait{order:-1;width:min(56vw,215px);max-width:215px;align-self:center;flex-shrink:0;margin:0}
+ .director-portrait__mat{padding:6px;box-shadow:0 10px 30px #56332118}
+ .director-portrait__mat:after{inset:12px -7px -7px 12px}
+ .director-portrait__photo img{aspect-ratio:4/4.2;height:auto;max-height:225px;object-position:center 29%}
+ .director-portrait__seal{bottom:13px;left:13px;width:29px;height:34px;padding:5px}
+ .director-portrait__caption{margin-top:8px;gap:6px;justify-content:space-between}
+ .director-portrait__caption span{font-size:17px}
+ .director-portrait__caption small{font-size:7px;max-width:100px}
+ .hero-copy{width:100%;max-width:520px}
+}
+@media(max-width:420px){
+ .hero{gap:10px;padding-top:68px}
+ .director-portrait{width:min(49vw,185px)}
+ .director-portrait__photo img{max-height:187px}
+ .director-portrait__caption span{font-size:16px}
+ .director-portrait__caption small{font-size:7px}
+ .hero .bio{font-size:11.5px;line-height:1.5}
+ .hero h1{font-size:clamp(38px,10vw,48px)}
+ .hero .sub{font-size:19px}
+ .intro-actions{margin-top:12px;gap:8px}
+ .intro-actions .btn{padding:8px 10px;font-size:10px}
+}
+@media(max-width:760px) and (max-height:710px){
+ .director-portrait{width:min(44vw,155px)}
+ .director-portrait__photo img{max-height:156px}
+ .director-portrait__caption{margin-top:4px}
+ .hero .bio{font-size:11px;line-height:1.45}
+ .hero{gap:9px}
+}
 </style></head><body class="loading">
 <div id="loader" class="loader" aria-label="Studio Anne introduction"><div class="load-inner"><div class="load-brand"><div class="symbol-build" aria-hidden="true"><div class="slice upper"><img src="studio-anne-monogram.svg" alt=""></div><div class="slice middle"><img src="studio-anne-monogram.svg" alt=""></div><div class="slice lower"><img src="studio-anne-monogram.svg" alt=""></div></div><div class="load-word"><span>Studio</span><span>Anne</span></div></div><p class="load-tagline">Interior Design • Styling • Sourcing</p><div class="load-progress"></div></div><button type="button" id="skip" class="skip">Skip intro ↗</button></div>
 <div class="site" id="site"><header><a class="brand" href="#profile" aria-label="Studio Anne"><img src="studio-anne-monogram.svg" alt=""><span><b>Studio</b><b>Anne</b></span></a><nav class="nav" aria-label="Section navigation"><a href="#profile" class="active">Profile</a><a href="#studio">Studio</a><a href="#connect">Connect</a></nav></header><nav class="dots" aria-label="Page sections"><a href="#profile" class="active" aria-label="Profile"></a><a href="#studio" aria-label="Studio and expertise"></a><a href="#connect" aria-label="Contact"></a></nav>
-<main><section class="screen hero" id="profile" aria-label="Clara Namara profile"><div class="hero-copy"><p class="eyebrow">Studio Anne / Creative Director</p><h1>Clara <em>Namara.</em></h1><p class="sub">Design with intention.</p><p class="bio">Studio Anne is a boutique design studio crafting distinctive interiors and thoughtfully curated spaces. We blend elegance, creativity and functionality to create timeless environments with character.</p><div class="intro-actions"><a class="btn" href="https://wa.me/256779688894" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><a class="btn outline" href="#studio">Explore studio ↓</a><a class="btn outline" href="#" id="saveContactHero" aria-label="Save Clara Namara contact card">Save contact ↓</a></div><div class="location">Creative Director &nbsp; · &nbsp; Kampala, Uganda</div></div><aside class="brand-composition" aria-label="Studio Anne design studio identity">
-<div class="composition-top"><span>THE STUDIO</span><span>KAMPALA · UGANDA</span></div>
-<div class="composition-art" aria-hidden="true"><div class="composition-arch composition-arch--outer"></div><div class="composition-arch composition-arch--inner"></div><div class="composition-emblem"><img src="studio-anne-monogram.svg" alt=""></div><span class="composition-rule composition-rule--left"></span><span class="composition-rule composition-rule--right"></span></div>
-<div class="composition-foot"><div><strong>Studio Anne</strong><p>Interior Design <span>•</span> Styling <span>•</span> Sourcing</p></div><span class="composition-number">01 / 03</span></div></aside><div class="scrollhint">Scroll to explore ↓</div></section>
+<main><section class="screen hero" id="profile" aria-label="Clara Namara profile"><div class="hero-copy"><p class="eyebrow">Studio Anne / Creative Director</p><h1>Clara <em>Namara.</em></h1><p class="sub">Design with intention.</p><p class="bio">Studio Anne is a boutique design studio crafting distinctive interiors and thoughtfully curated spaces. We blend elegance, creativity and functionality to create timeless environments with character.</p><div class="intro-actions"><a class="btn" href="https://wa.me/256779688894" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><a class="btn outline" href="#studio">Explore studio ↓</a><a class="btn outline" href="#" id="saveContactHero" aria-label="Save Clara Namara contact card">Save contact ↓</a></div><div class="location">Creative Director &nbsp; · &nbsp; Kampala, Uganda</div></div><figure class="director-portrait" aria-label="Portrait of Clara Namara">
+<div class="director-portrait__mat">
+  <div class="director-portrait__photo"><img src="profile%20picture.jpeg" alt="Clara Namara, Creative Director of Studio Anne" loading="eager" decoding="async"></div>
+  <span class="director-portrait__seal" aria-hidden="true"><img src="studio-anne-monogram.svg" alt=""></span>
+</div>
+<figcaption class="director-portrait__caption"><span>Clara Namara</span><small>CREATIVE DIRECTOR · STUDIO ANNE</small></figcaption>
+</figure><div class="scrollhint">Scroll to explore ↓</div></section>
 <section class="screen screen-two" id="studio" aria-label="About Studio Anne and expertise"><div class="section-top"><div><p class="eyebrow">02 / The Studio</p><h2>Considered spaces.<br><em>Timeless character.</em></h2></div><p class="about">A boutique interior design studio blending elegance, creativity and functionality. Led by Clara Namara, Studio Anne specialises in interior design, styling and sourcing.</p></div><div class="service-row"><article class="service"><span class="no">01</span><h3>Interior Design</h3><p>Concept development, space planning and thoughtful material selection.</p></article><article class="service"><span class="no">02</span><h3>Styling</h3><p>Furniture, décor and art curation, colour and material coordination.</p></article><article class="service"><span class="no">03</span><h3>Sourcing</h3><p>Procurement, finish selection and project coordination.</p></article></div><div class="details-grid" aria-label="Studio Anne skills and core competencies">
 <section class="expertise-card"><h3>Skills <span>07</span></h3><ul>
 <li>Interior Design &amp; Space Planning</li><li>Interior Styling &amp; Curation</li><li>Sourcing &amp; Procurement</li><li>Furniture &amp; Décor Selection</li><li>Colour &amp; Material Coordination</li><li>Landscaping &amp; Outdoor Styling</li><li>Project Coordination &amp; Execution</li>
